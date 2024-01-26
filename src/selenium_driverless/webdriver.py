@@ -144,7 +144,9 @@ class Chrome:
             from selenium_driverless.utils.utils import is_first_run, get_default_ua, set_default_ua
             from selenium_driverless.scripts.prefs import read_prefs, write_prefs
 
+            """
             await is_first_run()
+            """
             user_agent = await get_default_ua()
 
             if not self._options.debugger_address:
