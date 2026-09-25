@@ -164,7 +164,7 @@ def rand_mid_loc(elem: ElemType, spread_a: float = 1, spread_b: float = 1, bias_
     a_b = elem[1] - elem[0]
     b_c = elem[2] - elem[1]
     # noinspection PyUnreachableCode
-    area = np.abs(np.cross(a_b, b_c))
+    area = np.abs(a_b[0] * b_c[1] - a_b[1] * b_c[0])
     if area == 0:
         raise ValueError("The area of the element is 0")
 
