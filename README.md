@@ -2,7 +2,7 @@
 > [!NOTE]
 > **Out of maintenance** \
 > Unfortunately, I am no more able to maintain this project due to uni. \
-> Further, I belive that https://github.com/Kaliiiiiiiiii-Vinyzu/patchright/ has supassed in terms of capabilities and stability. \
+> Further, I belive that https://github.com/Kaliiiiiiiiii-Vinyzu/patchright/ has surpassed in terms of capabilities and stability. \
 > \
 > I consider this project a messy brute-force attempt of younger me who had no idea how to code. 2026-me considers botting and antibots a waste of resources without any meaningful contribution to society.
 
