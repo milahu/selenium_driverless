@@ -18,7 +18,6 @@ IS_POSIX = sys.platform.startswith(("darwin", "cygwin", "linux", "linux2"))
 T_JSON_DICT = typing.Dict[str, typing.Any]
 
 DATA_DIR = user_data_dir(appname="selenium-driverless", appauthor="kaliiiiiiiiii", ensure_exists=True)
-LICENSE = '\nThis project is licenced under "Attribution-NonCommercial-ShareAlike" as per https://github.com/kaliiiiiiiiii/Selenium-Driverless/blob/master/LICENSE.md#license\n'
 
 
 def find_chrome_executable():
@@ -105,24 +104,6 @@ def random_port(host: str = None):
 def check_timeout(start_monotonic: float, timeout: float):
     if (time.perf_counter() - start_monotonic) > timeout:
         raise asyncio.TimeoutError(f"driver.quit took longer than timeout: {timeout}")
-
-
-async def is_first_run():
-    path = DATA_DIR + "/is_first_run"
-    if os.path.isfile(path):
-        res = await read(path, sel_root=False)
-        if res == __version__:
-            return False
-        else:
-            await write(path, __version__, sel_root=False)
-            print(LICENSE, file=sys.stderr)
-            # new version
-            return None
-    else:
-        # first run
-        print(LICENSE, file=sys.stderr)
-        await write(path, __version__, sel_root=False)
-        return True
 
 
 async def get_default_ua():
