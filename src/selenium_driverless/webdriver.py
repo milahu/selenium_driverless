@@ -144,7 +144,7 @@ class Chrome:
     async def start_session(self):
         if not self._started:
             from selenium_driverless.utils.utils import read
-            from selenium_driverless.utils.utils import is_first_run, get_default_ua, set_default_ua
+            from selenium_driverless.utils.utils import get_default_ua, set_default_ua
             from selenium_driverless.scripts.prefs import read_prefs, write_prefs
 
             user_agent = await get_default_ua()
